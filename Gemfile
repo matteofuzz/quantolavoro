@@ -22,6 +22,12 @@ end
 
 gem 'jquery-rails'
 
+group :production do    
+  gem 'execjs'
+  gem 'therubyracer'  
+  gem 'coffee-rails', '~> 3.2.1'  
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
