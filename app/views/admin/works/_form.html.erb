@@ -1,0 +1,10 @@
+<%= semantic_form_for (@work || Work.new), :url => admin_works_path, :method => :post do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :project %>
+    <%= f.input :feature %>
+    <%= f.input :workday %>
+    <%= f.input :worktime %>
+    <%= f.input :note %>
+  <% end %>
+  <%= f.actions %>
+ <% end %>
