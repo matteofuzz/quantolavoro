@@ -3,7 +3,7 @@ class Feature < ActiveRecord::Base
   belongs_to :project
 
   def name_status
-  	s = name.truncate(20)
+  	s = name.truncate(30)
   	s << '(DONE)' if done
   	s
   end

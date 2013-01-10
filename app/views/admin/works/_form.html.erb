@@ -1,10 +1,11 @@
-<%= semantic_form_for (@work || Work.new), :url => admin_works_path, :method => :post do |f| %>
+<%= semantic_form_for (@work || Work.new(:workday => Date.today)), :url => admin_works_path, :method => :post do |f| %>
   <%= f.inputs do %>
     <%= f.input :project %>
     <%= f.input :feature %>
-    <%= f.input :workday %>
+    <%= f.input :workday, :as => :string, :input_html => { :class => 'datepicker' } %>
     <%= f.input :worktime %>
     <%= f.input :note %>
   <% end %>
   <%= f.actions %>
  <% end %>
+ <!-- TODO : Ajax features only of the project selected -->
