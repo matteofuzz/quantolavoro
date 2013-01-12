@@ -21,7 +21,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Today's works" do
           ul do
             Work.where(:workday => Date.today).map do |work|
-              li "#{work.project.name}: #{work.worktime}h, #{work.note.truncate(30)} #{'['+work.feature.name.to_s+']' if work.feature}"
+              li "#{work.project.name}: #{work.worktime}m, #{work.note.truncate(30)} #{'['+work.feature.name.to_s+']' if work.feature}"
             end
           end
         end
