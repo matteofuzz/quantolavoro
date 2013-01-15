@@ -1,11 +1,23 @@
 ActiveAdmin.register Project do
   menu :priority => 2
 
+  index do
+    selectable_column
+  	column :customer
+ 		column :name
+		column :description
+		column('Total time'){|project| minutes_as_hm(project.total_time)}
+		column :budget
+		column :deadtime
+		column :closed
+  end
+
   show do
   	attributes_table do
   		row :customer
   		row :name
   		row :description
+  		row('Total time'){|project| minutes_as_hm(project.total_time)}
   		row :budget
   		row :deadtime
   		row :closed

@@ -11,17 +11,17 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Open Projects Summary" do
           ul do
             Project.not_closed.map do |project|
-              li link_to "#{project.name} (#{project.total_time})", admin_project_path(project)
+              li link_to "#{project.name} (#{minutes_as_hm(project.total_time)})", admin_project_path(project)
             end
           end
         end
       end
 
       column do
-        panel "Today's works" do
+        panel "Today's works #{minutes_as_hm(Work.where(:workday => Date.today).sum(&:worktime))}" do
           ul do
             Work.where(:workday => Date.today).map do |work|
-              li "#{work.project.name}: #{work.worktime}m, #{work.note.truncate(30)} #{'['+work.feature.name.to_s+']' if work.feature}"
+              li "#{work.project.name}: #{minutes_as_hm(work.worktime)}, #{work.note.truncate(30)} #{'['+work.feature.name.to_s+']' if work.feature}"
             end
           end
         end
