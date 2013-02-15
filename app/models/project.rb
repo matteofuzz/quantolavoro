@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :features
 
+  default_scope :order => 'name'
+  
   scope :not_closed, where("closed <> ?", true)
 
   def total_time
