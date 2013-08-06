@@ -15,4 +15,12 @@ ActiveAdmin.register Work do
     column :invoiced
     default_actions
   end
+  
+  sidebar "Totals", :only => :index do
+    attributes_table_for works do
+      row(:worktime) { content_tag(:span, minutes_as_hm(works.sum(:worktime)), :class => "total") }
+      row(:not_invoiced) { content_tag(:span, minutes_as_hm(works.where("invoiced = 0 OR invoiced IS NULL").sum(:worktime)), :class => "total") }
+      row(:invoiced) { content_tag(:span, minutes_as_hm(works.where(:invoiced => true).sum(:worktime)), :class => "total") }
+    end
+  end
 end
