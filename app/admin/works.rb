@@ -4,6 +4,7 @@ ActiveAdmin.register Work do
   filter :project
   filter :workday
   filter :invoiced
+  filter :note
   filter :feature
   
   index do
