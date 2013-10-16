@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  done: false
-  invoiced: false
-
-two:
-  name: MyString
-  description: MyText
+  name: test_suite
+  description: "Test suite per il progetto (almeno 90%)"
   done: false
   invoiced: false

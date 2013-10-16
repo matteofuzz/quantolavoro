@@ -1,15 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  budget: 9.99
-  deadtime: 2013-01-02
-  closed: false
-
-two:
-  name: MyString
-  description: MyText
-  budget: 9.99
-  deadtime: 2013-01-02
+  name: Quantolavoro
+  description: "Il mio progetto di time tracking"
+  budget: 1000
+  deadtime: 2016-01-01
   closed: false

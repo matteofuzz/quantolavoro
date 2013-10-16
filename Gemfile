@@ -41,9 +41,12 @@ end
 # gem 'capistrano'
 
 group :development do
-  # To use debugger
   gem 'debugger'
   gem 'railroady'
+end
+
+group :test do
+  #gem "mocha", :require => false
 end
 
 # Active Admin

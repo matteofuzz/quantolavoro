@@ -2,16 +2,8 @@
 
 one:
   workday: 2013-01-02
-  worktime: 2013-01-02 15:57:39
-  note: MyText
+  worktime: 60
+  note: "Questo è un lavoro test"
   feature: 
-  project: 
-  invoiced: false
-
-two:
-  workday: 2013-01-02
-  worktime: 2013-01-02 15:57:39
-  note: MyText
-  feature: 
-  project: 
+  project: 1
   invoiced: false

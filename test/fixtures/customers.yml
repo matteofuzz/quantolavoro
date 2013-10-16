@@ -1,19 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  partita_iva: MyString
-  codice_fiscale: MyString
-  address: MyString
-  tel: MyString
-  mobtel: MyString
-  email: MyString
-
-two:
-  name: MyString
-  partita_iva: MyString
-  codice_fiscale: MyString
-  address: MyString
-  tel: MyString
-  mobtel: MyString
-  email: MyString
+  name: Cliente1
+  partita_iva: 01111111111
+  codice_fiscale: CLNT000000001
+  address: "via del test 1, Testata (TS) Italia"
+  tel: 04010101010  
+  mobtel: 3850011001100
+  email: cliente1@cliente1.com
